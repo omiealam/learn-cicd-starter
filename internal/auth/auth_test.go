@@ -1,8 +1,8 @@
 package auth
 
 import (
-  "errors"
-  "net/http"
+	"errors"
+	"net/http"
 	"testing"
 )
 
@@ -52,7 +52,7 @@ func TestGetAPIKey(t *testing.T) {
 			name:        "Malformed Authorization Header: Extra Fields",
 			headers:     http.Header{"Authorization": []string{"ApiKey abc123 extra"}},
 			expectedKey: "abc123",
-			expectError: false,  // Update to false if extra fields are allowed
+			expectError: false, // Update to false if extra fields are allowed
 		},
 	}
 
